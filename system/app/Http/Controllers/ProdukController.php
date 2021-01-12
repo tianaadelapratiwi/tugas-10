@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Models\Produk;
+use Faker;
 
 
 class ProdukController extends Controller
@@ -25,12 +26,12 @@ class ProdukController extends Controller
 		$produk->stok = request('stok');
 		$produk->berat = request('berat');
 		$produk->deskripsi = request('deskripsi');
-		$produk->save();
+		$produk->save(); 
 
-		$produk->handleUpload();
-
+		$produk->handleUploadFoto();
+	
 		return redirect('produk')->with('success','Data Berhasil Ditambahkan');
-		// dd(request()->all());
+		
 	}
 
 	function show(Produk $produk){
@@ -50,6 +51,8 @@ class ProdukController extends Controller
 		$produk->berat = request('berat');
 		$produk->deskripsi = request('deskripsi');
 		$produk->save();
+
+		$produk->handleUploadFoto();
 
 		return redirect('produk')->with('success','Data Berhasil Diubah');
 	}
