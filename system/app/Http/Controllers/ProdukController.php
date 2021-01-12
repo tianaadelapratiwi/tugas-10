@@ -58,6 +58,7 @@ class ProdukController extends Controller
 	}
 
 	function destroy(Produk $produk){
+		$produk->handleDelete();
 		$produk->delete();
 		return redirect('produk')->with('danger','Data Berhasil Dihapus');
 	}

@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 namespace App\Models;
 
@@ -13,8 +13,5 @@ class Produk extends Model{
 
 	protected $casts = [
 		'created_at' => 'datetime',
-		'updated_at' => 'datetime', 
-		'berat' => 'decimal:2',
-	];
-
+		'updated_at' => 'datetime'];
 }
