@@ -52,9 +52,9 @@
     						<div class="d-flex">
     							<div class="pricing">
 		    						<p class="price">
-		    							<span class="price-sale">Rp. {{number_format($data->harga)}}</span>
+		    							  Harga : {{$data->harga}}<br>
 		    							| Stok : {{$data->stok}} <br>
-		    							Berat : {{$data->berat}}
+		    							  Berat : {{$data->berat}}
 		    						</p>
 		    					</div>
 	    					</div>
